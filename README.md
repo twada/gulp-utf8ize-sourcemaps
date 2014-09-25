@@ -1,5 +1,4 @@
 # gulp-utf8ize-sourcemaps
-[![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][depstat-image]][depstat-url]
 
 > A [gulp](https://github.com/wearefractal/gulp) plugin for [utf8ize-sourcemaps](https://github.com/twada/utf8ize-sourcemaps).
 
@@ -23,9 +22,7 @@ Then, add it to your `gulpfile.js`.
 
 ```javascript
 var utf8ize = require('gulp-utf8ize-sourcemaps');
-var espower = require('gulp-espower');
 var coffee = require('gulp-coffee');
-var concat = require('gulp-concat');
 var sourcemaps = require('gulp-sourcemaps');
 
 gulp.src('./test/*test.coffee')
@@ -62,13 +59,3 @@ gulp.task('build', function() {
 ## License
 
 Licensed under the [MIT](http://twada.mit-license.org/) license.
-
-
-[npm-url]: https://npmjs.org/package/gulp-utf8ize-sourcemaps
-[npm-image]: https://badge.fury.io/js/gulp-utf8ize-sourcemaps.svg
-
-[travis-url]: http://travis-ci.org/twada/gulp-utf8ize-sourcemaps
-[travis-image]: https://secure.travis-ci.org/twada/gulp-utf8ize-sourcemaps.svg?branch=master
-
-[depstat-url]: https://gemnasium.com/twada/gulp-utf8ize-sourcemaps
-[depstat-image]: https://gemnasium.com/twada/gulp-utf8ize-sourcemaps.svg
