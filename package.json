@@ -1,0 +1,46 @@
+{
+  "name": "gulp-utf8ize-sourcemaps",
+  "description": "A Gulp plugin to apply utf8ize-sourcemaps to target Buffer/Stream",
+  "version": "0.0.0",
+  "author": {
+    "name": "Takuto Wada",
+    "email": "takuto.wada@gmail.com",
+    "url": "http://github.com/twada"
+  },
+  "bugs": "https://github.com/twada/gulp-utf8ize-sourcemaps/issues",
+  "dependencies": {
+    "bufferstreams": "^0.0.2",
+    "gulp-util": "^3.0.1",
+    "through2": "^1.1.1",
+    "utf8ize-sourcemaps": "^0.0.0"
+  },
+  "devDependencies": {
+    "event-stream": "^3.1.7",
+    "mocha": "^1.21.4"
+  },
+  "files": [
+    "README.md",
+    "index.js",
+    "package.json",
+    "test"
+  ],
+  "homepage": "http://github.com/twada/gulp-utf8ize-sourcemaps",
+  "keywords": [
+    "i18n",
+    "sourcemaps",
+    "gulpplugin"
+  ],
+  "license": {
+    "type": "MIT",
+    "url": "http://twada.mit-license.org/"
+  },
+  "main": "./index.js",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/twada/gulp-utf8ize-sourcemaps.git"
+  },
+  "scripts": {
+    "lint": "jshint index.js",
+    "test": "mocha"
+  }
+}
