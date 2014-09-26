@@ -2,6 +2,11 @@
 
 > A [gulp](https://github.com/wearefractal/gulp) plugin for [utf8ize-sourcemaps](https://github.com/twada/utf8ize-sourcemaps).
 
+[![Build Status][travis-image]][travis-url]
+[![NPM version][npm-image]][npm-url]
+[![Dependency Status][depstat-image]][depstat-url]
+[![License][license-image]][license-url]
+
 
 ## Description
 `gulp-utf8ize-sourcemaps` is a gulp plugin to apply [utf8ize-sourcemaps](https://github.com/twada/utf8ize-sourcemaps) to target Buffer/Stream.
@@ -59,3 +64,16 @@ gulp.task('build', function() {
 ## License
 
 Licensed under the [MIT](http://twada.mit-license.org/) license.
+
+
+[npm-url]: https://npmjs.org/package/gulp-utf8ize-sourcemaps
+[npm-image]: https://badge.fury.io/js/gulp-utf8ize-sourcemaps.svg
+
+[travis-url]: http://travis-ci.org/twada/gulp-utf8ize-sourcemaps
+[travis-image]: https://secure.travis-ci.org/twada/gulp-utf8ize-sourcemaps.svg?branch=master
+
+[depstat-url]: https://gemnasium.com/twada/gulp-utf8ize-sourcemaps
+[depstat-image]: https://gemnasium.com/twada/gulp-utf8ize-sourcemaps.svg
+
+[license-url]: http://twada.mit-license.org/
+[license-image]: http://img.shields.io/badge/license-MIT-brightgreen.svg
