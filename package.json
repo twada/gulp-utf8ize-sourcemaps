@@ -1,7 +1,7 @@
 {
   "name": "gulp-utf8ize-sourcemaps",
   "description": "A Gulp plugin to apply utf8ize-sourcemaps to target Buffer/Stream",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "author": {
     "name": "Takuto Wada",
     "email": "takuto.wada@gmail.com",
