@@ -15,8 +15,8 @@
     "utf8ize-sourcemaps": "^0.1.0"
   },
   "devDependencies": {
-    "event-stream": "^3.1.7",
-    "mocha": "^2.0.1"
+    "event-stream": "^3.3.1",
+    "mocha": "^2.3.3"
   },
   "files": [
     "CHANGELOG.md",
