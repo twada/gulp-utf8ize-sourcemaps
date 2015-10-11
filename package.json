@@ -9,7 +9,7 @@
   },
   "bugs": "https://github.com/twada/gulp-utf8ize-sourcemaps/issues",
   "dependencies": {
-    "bufferstreams": "^0.0.2",
+    "bufferstreams": "^1.1.0",
     "gulp-util": "^3.0.1",
     "through2": "^1.1.1",
     "utf8ize-sourcemaps": "^0.1.0"
