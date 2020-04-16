@@ -5,7 +5,7 @@ delete require.cache[require.resolve('../')];
 
 var fs = require('fs'),
     es = require('event-stream'),
-    assert = require('assert').strict,
+    assert = require('assert'),
     Vinyl = require('vinyl'),
     utf8ize = require('../');
 
