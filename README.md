@@ -63,7 +63,7 @@ gulp.task('build', function() {
 
 ## License
 
-Licensed under the [MIT](http://twada.mit-license.org/2014-2015) license.
+Licensed under the [MIT](http://twada.mit-license.org/2014-2020) license.
 
 
 [npm-url]: https://npmjs.org/package/gulp-utf8ize-sourcemaps
@@ -75,5 +75,5 @@ Licensed under the [MIT](http://twada.mit-license.org/2014-2015) license.
 [depstat-url]: https://gemnasium.com/twada/gulp-utf8ize-sourcemaps
 [depstat-image]: https://gemnasium.com/twada/gulp-utf8ize-sourcemaps.svg
 
-[license-url]: http://twada.mit-license.org/2014-2015
+[license-url]: http://twada.mit-license.org/2014-2020
 [license-image]: http://img.shields.io/badge/license-MIT-brightgreen.svg
