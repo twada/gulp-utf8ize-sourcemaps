@@ -9,14 +9,15 @@
  */
 'use strict';
 
-var through = require('through2');
-var gutil = require('gulp-util');
 var utf8ize = require('utf8ize-sourcemaps');
+var through = require('through2');
+var bufferFrom = require('buffer-from');
 var BufferStreams = require('bufferstreams');
+var PluginError = require('plugin-error');
 var PLUGIN_NAME = 'gulp-utf8ize-sourcemaps';
 
 var transform = function (code) {
-    return new Buffer(utf8ize(code));
+    return bufferFrom(utf8ize(code));
 };
 
 module.exports = function () {
@@ -30,7 +31,7 @@ module.exports = function () {
         } else if (file.isStream()) {
             file.contents = file.contents.pipe(new BufferStreams(function(err, buf, cb) {
                 if(err) {
-                    cb(new gutil.PluginError(PLUGIN_NAME, err, {showStack: true}));
+                    cb(new PluginError(PLUGIN_NAME, err, {showStack: true}));
                 } else {
                     cb(null, transform(buf.toString(encoding)));
                 }

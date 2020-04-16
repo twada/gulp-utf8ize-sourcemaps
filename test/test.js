@@ -5,21 +5,21 @@ delete require.cache[require.resolve('../')];
 
 var fs = require('fs'),
     es = require('event-stream'),
-    assert = require('assert'),
-    gutil = require('gulp-util'),
+    assert = require('assert').strict,
+    Vinyl = require('vinyl'),
     utf8ize = require('../');
 
 describe('gulp-utf8ize-sourcemaps', function () {
-    
+
     it('should produce expected file via buffer', function (done) {
         var stream = utf8ize(),
-            srcFile = new gutil.File({
+            srcFile = new Vinyl({
                 path: 'test/fixtures/example.js',
                 cwd: 'test/',
                 base: 'test/fixtures',
                 contents: fs.readFileSync('test/fixtures/example.js')
             }),
-            expectedFile = new gutil.File({
+            expectedFile = new Vinyl({
                 path: 'test/expected/example.js',
                 cwd: 'test/',
                 base: 'test/expected',
@@ -41,13 +41,13 @@ describe('gulp-utf8ize-sourcemaps', function () {
 
     it('should produce expected file via stream', function (done) {
         var stream = utf8ize(),
-            srcStream = new gutil.File({
+            srcStream = new Vinyl({
                 path: 'test/fixtures/example.js',
                 cwd: 'test/',
                 base: 'test/fixtures',
                 contents: fs.createReadStream('test/fixtures/example.js')
             }),
-            expectedFile = new gutil.File({
+            expectedFile = new Vinyl({
                 path: 'test/expected/example.js',
                 cwd: 'test/',
                 base: 'test/expected',
@@ -62,7 +62,7 @@ describe('gulp-utf8ize-sourcemaps', function () {
             assert(newFile.contents);
             newFile.contents.pipe(es.wait(function(err, data) {
                 assert(!err);
-                assert.equal(data, String(expectedFile.contents));
+                assert.equal(String(data), String(expectedFile.contents));
                 done();
             }));
         });
