@@ -4,7 +4,6 @@
 
 [![Build Status][travis-image]][travis-url]
 [![NPM version][npm-image]][npm-url]
-[![Dependency Status][depstat-image]][depstat-url]
 [![License][license-image]][license-url]
 
 
@@ -71,9 +70,6 @@ Licensed under the [MIT](http://twada.mit-license.org/2014-2020) license.
 
 [travis-url]: http://travis-ci.org/twada/gulp-utf8ize-sourcemaps
 [travis-image]: https://secure.travis-ci.org/twada/gulp-utf8ize-sourcemaps.svg?branch=master
-
-[depstat-url]: https://gemnasium.com/twada/gulp-utf8ize-sourcemaps
-[depstat-image]: https://gemnasium.com/twada/gulp-utf8ize-sourcemaps.svg
 
 [license-url]: http://twada.mit-license.org/2014-2020
 [license-image]: http://img.shields.io/badge/license-MIT-brightgreen.svg
