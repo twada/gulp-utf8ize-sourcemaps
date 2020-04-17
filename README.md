@@ -61,6 +61,11 @@ gulp.task('build', function() {
 * [Takuto Wada](http://github.com/twada)
 
 
+## Support Policy
+
+Supports Node under maintenance. In other words, we stop supporting old Node versions when [their maintenance ends](https://github.com/nodejs/Release). Any other environments are not supported officially (means that we do not test against them on CI service).
+
+
 ## License
 
 Licensed under the [MIT](http://twada.mit-license.org/2014-2020) license.
