@@ -11,13 +11,12 @@
 
 var utf8ize = require('utf8ize-sourcemaps');
 var through = require('through2');
-var bufferFrom = require('buffer-from');
 var BufferStreams = require('bufferstreams');
 var PluginError = require('plugin-error');
 var PLUGIN_NAME = 'gulp-utf8ize-sourcemaps';
 
 var transform = function (code) {
-    return bufferFrom(utf8ize(code));
+    return Buffer.from(utf8ize(code));
 };
 
 module.exports = function () {
