@@ -9,23 +9,23 @@
   },
   "bugs": "https://github.com/twada/gulp-utf8ize-sourcemaps/issues",
   "dependencies": {
-    "buffer-from": "^1.0.0",
-    "bufferstreams": "^1.1.0",
+    "bufferstreams": "^3.0.0",
     "plugin-error": "^1.0.0",
-    "through2": "^2.0.0",
+    "through2": "^3.0.0",
     "utf8ize-sourcemaps": "^1.0.0"
   },
   "devDependencies": {
-    "event-stream": "^3.3.1",
-    "mocha": "^2.3.3",
+    "event-stream": "^4.0.0",
+    "mocha": "^7.0.0",
+    "semistandard": "^14.2.0",
+    "snazzy": "^8.0.0",
     "vinyl": "^2.0.0"
   },
   "files": [
     "CHANGELOG.md",
     "README.md",
     "index.js",
-    "package.json",
-    "test"
+    "package.json"
   ],
   "homepage": "http://github.com/twada/gulp-utf8ize-sourcemaps",
   "keywords": [
@@ -40,7 +40,17 @@
     "url": "http://github.com/twada/gulp-utf8ize-sourcemaps.git"
   },
   "scripts": {
-    "lint": "jshint index.js",
-    "test": "mocha"
+    "fmt": "semistandard --fix index.js 'test/*.js'",
+    "lint": "semistandard --verbose index.js 'test/*.js' | snazzy",
+    "test": "npm run lint && npm run test:unit",
+    "test:unit": "mocha"
+  },
+  "semistandard": {
+    "globals": [
+      "describe",
+      "context",
+      "beforeEach",
+      "it"
+    ]
   }
 }

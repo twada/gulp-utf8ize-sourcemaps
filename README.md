@@ -4,6 +4,7 @@
 
 [![Build Status][travis-image]][travis-url]
 [![NPM version][npm-image]][npm-url]
+[![Code Style][style-image]][style-url]
 [![License][license-image]][license-url]
 
 
@@ -25,9 +26,9 @@ Then, add it to your `gulpfile.js`.
 ### gulp example
 
 ```javascript
-var utf8ize = require('gulp-utf8ize-sourcemaps');
-var coffee = require('gulp-coffee');
-var sourcemaps = require('gulp-sourcemaps');
+const utf8ize = require('gulp-utf8ize-sourcemaps');
+const coffee = require('gulp-coffee');
+const sourcemaps = require('gulp-sourcemaps');
 
 gulp.src('./test/*test.coffee')
     .pipe(sourcemaps.init())
@@ -41,12 +42,12 @@ gulp.src('./test/*test.coffee')
 ### gulp + browserify example
 
 ```javascript
-var utf8ize = require('gulp-utf8ize-sourcemaps');
-var browserify = require('browserify');
-var source = require('vinyl-source-stream');
+const utf8ize = require('gulp-utf8ize-sourcemaps');
+const browserify = require('browserify');
+const source = require('vinyl-source-stream');
 
 gulp.task('build', function() {
-    var bundleStream = browserify({entries: './index.js', debug: true}).bundle();
+    const bundleStream = browserify({entries: './index.js', debug: true}).bundle();
     return bundleStream
         .pipe(source('bundle.js'))
         .pipe(utf8ize())
@@ -58,6 +59,11 @@ gulp.task('build', function() {
 ## Author
 
 * [Takuto Wada](http://github.com/twada)
+
+
+## Support Policy
+
+Supports Node under maintenance. In other words, we stop supporting old Node versions when [their maintenance ends](https://github.com/nodejs/Release). Any other environments are not supported officially (means that we do not test against them on CI service).
 
 
 ## License
@@ -73,3 +79,6 @@ Licensed under the [MIT](http://twada.mit-license.org/2014-2020) license.
 
 [license-url]: http://twada.mit-license.org/2014-2020
 [license-image]: http://img.shields.io/badge/license-MIT-brightgreen.svg
+
+[style-url]: https://github.com/Flet/semistandard
+[style-image]: https://img.shields.io/badge/code%20style-semistandard-brightgreen.svg
