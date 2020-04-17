@@ -25,9 +25,9 @@ Then, add it to your `gulpfile.js`.
 ### gulp example
 
 ```javascript
-var utf8ize = require('gulp-utf8ize-sourcemaps');
-var coffee = require('gulp-coffee');
-var sourcemaps = require('gulp-sourcemaps');
+const utf8ize = require('gulp-utf8ize-sourcemaps');
+const coffee = require('gulp-coffee');
+const sourcemaps = require('gulp-sourcemaps');
 
 gulp.src('./test/*test.coffee')
     .pipe(sourcemaps.init())
@@ -41,12 +41,12 @@ gulp.src('./test/*test.coffee')
 ### gulp + browserify example
 
 ```javascript
-var utf8ize = require('gulp-utf8ize-sourcemaps');
-var browserify = require('browserify');
-var source = require('vinyl-source-stream');
+const utf8ize = require('gulp-utf8ize-sourcemaps');
+const browserify = require('browserify');
+const source = require('vinyl-source-stream');
 
 gulp.task('build', function() {
-    var bundleStream = browserify({entries: './index.js', debug: true}).bundle();
+    const bundleStream = browserify({entries: './index.js', debug: true}).bundle();
     return bundleStream
         .pipe(source('bundle.js'))
         .pipe(utf8ize())
